@@ -1,0 +1,25 @@
+Phase 05 — Out-of-Sample Robustness: pre-2020 vs 2020+ Split
+Source: paths_panel_v1.csv
+Cluster: fighter_id
+Split: year < 2020 (pre-2020, N=4,830) | year >= 2020 (2020+, N=3,282)
+Generated: 2026-07-08
+
+Mech A: g_open ~ move
+  Window       N      coef       SE        p        95% CI
+  pre-2020   4,830  +1.11945  0.08704  <0.0001  [+0.94884, +1.29005]
+  2020+      3,282  +0.93578  0.09209  <0.0001  [+0.75528, +1.11628]
+  VERDICT: REAL — same-signed and significant in both windows.
+
+Mech B: win ~ p_open + move  [move coefficient only]
+  Window       N      coef       SE        p        95% CI
+  pre-2020   4,830  +1.11818  0.08713  <0.0001  [+0.94740, +1.28895]
+  2020+      3,282  +0.93593  0.09236  <0.0001  [+0.75490, +1.11695]
+  VERDICT: REAL — same-signed and significant in both windows.
+
+Mech C: g_close ~ move
+  Window       N      coef       SE        p        95% CI
+  pre-2020   4,830  +0.11945  0.08704  0.1700   [-0.05116, +0.29005]
+  2020+      3,282  -0.06422  0.09209  0.4856   [-0.24472, +0.11628]
+  VERDICT: REJECT — sign flip and insignificant in both windows.
+
+Rule applied: a result counts as real only if same-signed and significant (p<0.05) in both windows.

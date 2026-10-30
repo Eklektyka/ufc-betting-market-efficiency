@@ -1,0 +1,24 @@
+Phase 06 — Forecast-Encompassing Test: win ~ p_open + p_close_hi
+Source: paths_panel_v1.csv
+Cluster: fighter_id
+Generated: 2026-07-08
+
+Full sample (2007-2026), N=8,112:
+  Variable       coef       SE        p
+  p_open       -0.02749  0.07268  0.7053
+  p_close_hi   +1.03862  0.06344  <0.0001
+
+pre-2020, N=4,830:
+  Variable       coef       SE        p
+  p_open       -0.16891  0.09878  0.0873
+  p_close_hi   +1.11818  0.08713  <0.0001
+
+2020+, N=3,282:
+  Variable       coef       SE        p
+  p_open       +0.17208  0.10443  0.0994
+  p_close_hi   +0.93593  0.09236  <0.0001
+
+VERDICT: p_close_hi is positive and significant (p<0.0001) in all three samples.
+         p_open collapses to near-zero and loses significance in all three (p=0.705, 0.087, 0.099).
+         p_open coefficient sign flips across eras (negative pre-2020, positive post-2020).
+         The closing line encompasses the opening line's information in all windows.

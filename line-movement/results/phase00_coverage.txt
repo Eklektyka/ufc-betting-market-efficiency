@@ -1,0 +1,31 @@
+Phase 00 — BFO Coverage Check
+Source: bfo_odds_raw.csv (18,660 rows, one per fighter per fight)
+Generated: 2026-07-08
+
+Unique fights (deduped):                          12,097
+  - Fights with 2 rows (both fighters on BFO):    6,563
+  - Fights with 1 row (opponent has no BFO page): 5,534
+  Row check: 6563*2 + 5534*1 = 18,660 ✓
+
+(1) Both corners non-null fighter_open:           10,581 / 12,097  (87.5%)
+(2) Both corners non-null close_hi:               10,581 / 12,097  (87.5%)
+(3) Usable (both open AND both close_hi):         10,581 / 12,097  (87.5%)
+    Note: open and close missingness are perfectly collinear (same 1,516 fights missing both).
+
+(4) Five example fights (both corners, open and close_hi):
+  fighter_name  fighter_open  fighter_close_hi  opponent_name  opponent_open  opponent_close_hi  event_name
+     Sam Stout        -165.0            -101.0     K.J. Noons          125.0             -105.0  UFC: The Ultimate Fighter Nations Finale
+     Sam Stout        -165.0             105.0     Matt Wiman          135.0             -125.0  UFC 97: Redemption
+     Sam Stout        -160.0            -135.0  Rich Clementi          130.0              115.0  UFC 83: Serra vs St-Pierre 2
+     Sam Stout        -265.0            -265.0  Cody McKenzie          185.0              245.0  UFC on FOX 9: Johnson vs. Benavidez
+     Sam Stout        -120.0             115.0 Thiago Tavares         -110.0             -125.0  UFC 142: Aldo vs. Mendes
+
+(5) Opening implied prob sums (should be >1 — vig present):
+  Sam Stout vs K.J. Noons:       0.622642 + 0.444444 = 1.067086
+  Sam Stout vs Matt Wiman:       0.622642 + 0.425532 = 1.048173
+  Sam Stout vs Rich Clementi:    0.615385 + 0.434783 = 1.050167
+  Sam Stout vs Cody McKenzie:    0.726027 + 0.350877 = 1.076905
+  Sam Stout vs Thiago Tavares:   0.545455 + 0.523810 = 1.069264
+  All 5 sums > 1: True
+
+VERDICT: Usable both-sides open+close sample = 10,581 fights — YES, proceed.

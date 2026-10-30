@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-08-20T23:28:42Z",
+  "git_commit": "b2f036abc8702c4142f112b7aaa39faa72a4a177",
+  "files": {
+    "final_users.csv": {
+      "path": "C:\\Users\\micha\\OneDrive\\Pulpit\\ufc_scraper\\final_users.csv",
+      "sha256": "cfac1ea5965dc3cd214c4520f26841cf560db3521b7abda2d83e0c81d9379191"
+    },
+    "bfo_close_all.csv": {
+      "path": "C:\\Research\\ufc\\odds\\bfo_close_all.csv",
+      "sha256": "faecccd6aaf327e0962518b67a6973ccab5ed63d36959c066d55aadab5461791"
+    },
+    "bfo_close_manual.csv": {
+      "path": "C:\\Research\\ufc\\odds\\bfo_close_manual.csv",
+      "sha256": "11f9bbf21ed0f9b6d3ad2d01de59f566840648ea2fde122dae55949e73888624"
+    },
+    "bfo_close_rank.csv": {
+      "path": "C:\\Research\\ufc\\odds\\bfo_close_rank.csv",
+      "sha256": "022823cdd284f7e5e32972d8b35c37075e363232f72993f08d3b8b4ba84e06a8"
+    },
+    "bfo_close_ext_2026.csv": {
+      "path": "C:\\Research\\ufc\\odds\\bfo_close_ext_2026.csv",
+      "sha256": "5e98e380bba878944e5dcc3608c5079567f8d4ba55f0d08a79d36cb01fcd5a25"
+    },
+    "card_map.csv": {
+      "path": "C:\\Research\\ufc\\odds\\card_map.csv",
+      "sha256": "b21978465a7e1533fe1a797b149defc3b89489e202d1517d64f7bb11fd4c8b48"
+    },
+    "name_overrides.csv": {
+      "path": "C:\\Research\\ufc\\odds\\name_overrides.csv",
+      "sha256": "d21b6126dd6c8ed4ad0d910637be993cc57fba3cea5c77090c3dc43d272d822c"
+    },
+    "score_user.py": {
+      "path": "C:\\Research\\ufc\\odds\\score_user.py",
+      "sha256": "3949dc6464a19f71eb769b4318e1ab5970ae487e88da8c6e95c341f2c61724e7"
+    },
+    "simulate.py": {
+      "path": "C:\\Research\\ufc\\odds\\simulate.py",
+      "sha256": "2f52df711c760d0ac791276f00e76cda707127c5d7d203370f3f52179fc8d0b6"
+    },
+    "ezo_join.py": {
+      "path": "C:\\Research\\ufc\\odds\\ezo_join.py",
+      "sha256": "b387e813344241c7a22e947f3e9a84cc14632fe183c961a6d5eb3d296f0c6884"
+    },
+    "scrape_bfo.py": {
+      "path": "C:\\Research\\ufc\\odds\\scrape_bfo.py",
+      "sha256": "78209c54e224ce99abdb3ab8c9cd7ad3f3164d30d9c36cc8db0dd61cb4303537"
+    },
+    "sim_results.csv": {
+      "path": "C:\\Research\\ufc\\odds\\sim_results.csv",
+      "sha256": "b2f81812386067b81f32b4ef20375593ce475815b1a097edfa051df84de39bc4"
+    },
+    "osf_prereg.md": {
+      "path": "C:\\Research\\ufc\\odds\\osf_prereg.md",
+      "sha256": "4a50f26d61395ff284d36bf234fb68caa9b2ddf6e5e6766db89d701b505671dc"
+    }
+  }
+}

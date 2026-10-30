@@ -1,0 +1,29 @@
+# Data files — not distributed
+*.csv
+*.parquet
+*.jsonl
+*.gz
+*.RData
+*.xlsx
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Credentials
+.env
+*.pem
+*.key
+key.txt
+*cookies*

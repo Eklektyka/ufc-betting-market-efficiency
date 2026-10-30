@@ -1,0 +1,37 @@
+Phase 07 — Revision Magnitude Test: H0: coef(move) = 1
+Source: paths_panel_v1.csv
+Cluster: fighter_id
+Generated: 2026-07-08
+
+Regression: g_open ~ move  (equivalent to testing whether market revision is correctly sized)
+H0: coefficient on move = 1 (efficient); >1 = underreaction; <1 = overreaction.
+
+Full sample (2007-2026), N=8,112:
+  coef(move)  = +1.03846
+  SE          =  0.06351
+  t vs H0=1   =  +0.606
+  p vs H0=1   =  0.5448
+  95% CI      = [+0.91399, +1.16294]
+  --> Cannot reject H0=1 (efficient revision magnitude)
+
+pre-2020, N=4,830:
+  coef(move)  = +1.11945
+  SE          =  0.08704
+  t vs H0=1   =  +1.372
+  p vs H0=1   =  0.1701
+  95% CI      = [+0.94884, +1.29005]
+  --> Cannot reject H0=1 (efficient revision magnitude)
+
+2020+, N=3,282:
+  coef(move)  = +0.93578
+  SE          =  0.09209
+  t vs H0=1   =  -0.697
+  p vs H0=1   =  0.4857
+  95% CI      = [+0.75528, +1.11628]
+  --> Cannot reject H0=1 (efficient revision magnitude)
+
+VERDICT: Cannot reject H0=1 in any window.
+         Revision magnitude is efficient full-sample and in both subperiods.
+         All three 95% CIs contain 1.0.
+         The market moves the right amount, in the right direction,
+         and fully impounds that movement into the close.

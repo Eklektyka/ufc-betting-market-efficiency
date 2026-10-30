@@ -1,0 +1,24 @@
+Phase 03 — Does Line Movement Predict the Opening-Price Error?
+Source: paths_panel_v1.csv (N=8,112)
+Cluster: fighter_id
+Generated: 2026-07-08
+
+Regression 1: g_open ~ move
+  N         = 8,112
+  coef(move) = +1.03846
+  SE         =  0.06351
+  p          = <0.0001
+  95% CI     = [+0.91399, +1.16294]
+  Interpretation: Direction the line moved predicts residual error in the opening price.
+                  Market's revision is informative.
+
+Regression 2: win ~ p_open + move  [move coefficient only]
+  N         = 8,112
+  coef(move) = +1.03862
+  SE         =  0.06344
+  p          = <0.0001
+  95% CI     = [+0.91429, +1.16296]
+
+VERDICT: move coef=+1.039 (positive), p<0.0001.
+         Move DOES add predictive power over the opening price.
+         The market's revision contains information not in the opening line.

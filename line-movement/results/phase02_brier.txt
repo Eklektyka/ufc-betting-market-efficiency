@@ -1,0 +1,21 @@
+Phase 02 — Calibration Regressions and Brier Score Comparison
+Source: paths_panel_v1.csv (N=8,112)
+Generated: 2026-07-08
+
+(a) Calibration regressions (OLS, standard errors):
+  g_open  ~ p_open:       intercept=-0.00384  slope=+0.00768  SE=0.03021  t=+0.254  p=0.7994
+  g_close ~ p_close_hi:   intercept=-0.00810  slope=+0.01620  SE=0.02688  t=+0.603  p=0.5466
+  Neither slope differs from 0. Both lines are calibrated in the linear sense.
+
+(b) Accuracy metrics (N=8,112):
+  Metric                       Open        Close    Diff (Close-Open)
+  Mean abs gap (MAE)        0.440155    0.426259          -0.013896
+  Brier score               0.219850    0.212541          -0.007308
+
+(c) Bootstrap 95% CI on Brier difference (close - open)  [B=5,000, seed=42]:
+  Observed difference:  -0.007308
+  95% CI:               [-0.008945, -0.005583]
+  CI entirely below 0:  Yes
+
+VERDICT: Brier(close) - Brier(open) = -0.007308; 95% CI [-0.008945, -0.005583].
+         Close IS statistically more accurate than open (CI entirely below 0).

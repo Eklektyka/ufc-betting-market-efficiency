@@ -1,0 +1,21 @@
+Phase 04 — Is Movement Fully Impounded at the Close?
+Source: paths_panel_v1.csv (N=8,112)
+Cluster: fighter_id
+Generated: 2026-07-08
+
+Regression: g_close ~ move
+  N          = 8,112
+  coef(move) = +0.03846
+  SE         =  0.06351
+  p          =  0.5448
+  95% CI     = [-0.08601, +0.16294]
+
+Coherence check (arithmetic):
+  coef(g_open ~ move)  = +1.03846
+  coef(g_close ~ move) = +0.03846
+  Difference           = +1.00000  (= 1 by construction: g_open - g_close = move)
+
+VERDICT: coef ~0 and insignificant (p=0.545).
+         Movement's information is fully impounded into the closing line.
+         Market is efficient with respect to its own revision;
+         no exploitable residual error remains at the close.

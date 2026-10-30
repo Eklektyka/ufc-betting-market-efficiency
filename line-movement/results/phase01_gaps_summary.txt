@@ -1,0 +1,32 @@
+Phase 01 — Build Paths Panel (p_open, g_open, g_close, move)
+Source: analysis_panel_cc.csv (N=9,267) joined to ufc_fights_clean.csv
+Generated: 2026-07-08
+
+Sample construction:
+  analysis_panel_cc.csv base rows:          9,267
+  Excluded — imputed opening odds:         -1,155
+  Excluded — null p_open:                      -0
+  Usable (real open + real close_hi):       8,112
+
+Column definitions:
+  p_open     = Shin-devigged winning probability at opening line (fighter perspective)
+  p_close_hi = Shin-devigged winning probability at closing line (best available book)
+  g_open     = win - p_open
+  g_close    = win - p_close_hi  (renamed from 'g' in analysis_panel_cc.csv)
+  move       = p_close_hi - p_open  (market's revision in probability space)
+
+Summary statistics (N=8,112):
+  Variable       mean       SD
+  p_open        0.500    0.172
+  p_close_hi    0.500    0.190
+  g_open        0.000    0.469
+  g_close       0.000    0.461
+  move          0.000    0.082
+
+Sanity check (both must be near 0):
+  mean(g_close) =  0.00000
+  mean(g_open)  =  0.00000
+  PASS: lines are unbiased on average at both open and close.
+
+Output: paths_panel_v1.csv (8,112 rows, 20 cols)
+        Tagged paths-v1 in C:/Users/micha/merged/ git repo (commit 0f8d10a)
