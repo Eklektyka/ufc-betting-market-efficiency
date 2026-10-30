@@ -84,11 +84,7 @@ The MMA efficiency paper's war-shock finding is the most instructive failure.
 The original DiD showed a +18.1 pp excess for ethnic-Russian fighters
 post-invasion — statistically significant against a Caucasus placebo. The
 effect was a look-ahead artefact: Wikidata's nationality field reflects
-present-day citizenship, not citizenship at fight time. Fighters classified as
-"Russian" in the data may have received that label after the study period
-began. The lesson: when using linked open data for quasi-experimental designs,
-verify that classification variables are point-in-time, not retroactively
-updated.
+popularity, so better performing fighters have a higher chance of getting a Wikipedia article.
 
 ---
 
